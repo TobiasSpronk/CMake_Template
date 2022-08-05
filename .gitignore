@@ -4,6 +4,7 @@
 # directories
 build/
 .vscode/
+.pytest_cache/
 html/
 latex/
 
