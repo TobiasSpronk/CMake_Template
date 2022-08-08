@@ -13,3 +13,8 @@ target_include_directories(${LIBRARY_NAME} PUBLIC
 
 target_link_libraries(${LIBRARY_NAME} PRIVATE
     nlohmann_json)
+
+
+if (${ENABLE_WARNINGS})
+    target_set_warnings(TARGET ${LIBRARY_NAME} ENABLE ON AS_ERROR OFF)
+endif()

@@ -9,6 +9,7 @@
 
 int main(int argc, char **argv)
 {
+    int igfd = 1;
     std::string s = print_Hello_World();
     spdlog::info(fmt::format("Welcome to {} Version {} \n", project_name, project_version));
     cxxopts::Options options(project_name.data());

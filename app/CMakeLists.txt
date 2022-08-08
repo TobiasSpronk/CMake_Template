@@ -15,6 +15,6 @@ target_link_libraries(${EXECUTABLE_NAME} PUBLIC
     fmt::fmt
     ${CONAN_CXXOPTS})
 
-
-
-message("Exe-Name: " ${EXECUTABLE_NAME})
+if (${ENABLE_WARNINGS})
+    target_set_warnings(TARGET ${EXECUTABLE_NAME} ENABLE ON AS_ERROR OFF)
+endif()
